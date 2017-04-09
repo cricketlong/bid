@@ -18,7 +18,7 @@ Full table:<br>
 </table>
 {% endif %}
 <br>
-<form action="/bid/" method="post">
+<form action="{% url 'index' %}" method="post">
 <input type="text" name="keyword">&nbsp;<input type="submit" value="search">
 {% csrf_token %}
 {% if results %}
