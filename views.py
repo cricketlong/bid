@@ -5,7 +5,7 @@ from .models import Keyword
 def index(request):
     if 'keyword' in request.POST:
         keyword = request.POST['keyword']
-        results = Keyword.objects.filter(name__contains=keyword).select_related()
+        results = Keyword.objects.filter(name=keyword).select_related()
     else:
         results = None
 
